@@ -11,15 +11,15 @@ jobs:
 
     - uses: actions/checkout@v1
 
-    - name: Use Node.js 10.x
+    - name: Use Node.js 14
       uses: actions/setup-node@v1
       with:
-        node-version: 10.x
+        node-version: 14
 
-    - name: npm install, make test-coverage
+    - name: Run test and generate test coverage
       run: |
         npm install
-        jest --coverage
+        ./node_modules/.bin/jest --coverage
 
     - name: Coveralls
       uses: coverallsapp/github-action@master
