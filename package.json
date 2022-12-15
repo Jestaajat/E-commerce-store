@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Jestaajat/E-commerce-store/issues"
   },
-  "homepage": "https://github.com/Jestaajat/E-commerce-store#readme"
+  "homepage": "https://github.com/Jestaajat/E-commerce-store#readme",
+  "dependencies": {
+    "jest-extended": "^3.2.0"
+  }
 }
