@@ -1,6 +1,10 @@
 import isObject from '../src/isObject';
 
 describe('isObject.js', () => {
+    test('Test isObject with an Function', () => {
+        expect(isObject(Function)).toBe(true);
+    })
+
     test('Test isObject with an Object', () => {
         expect(isObject(Object)).toBe(true);
     })
@@ -9,7 +13,7 @@ describe('isObject.js', () => {
         expect(isObject(Date)).toBe(true);
     }) 
 
-    test('Test isObject with no input', () => {
+    test('Test isObject with null', () => {
         expect(isObject(null)).toBe(false);
     }) 
 

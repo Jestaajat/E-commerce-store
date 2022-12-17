@@ -1,8 +1,7 @@
 import memoize from '../src/memoize';
-import {memoized} from '../src/memoize';
 
-const res = 'result';
-const func = memoize((res) => res);
+const TEST_OBJECT = 'result';
+const TEST_FUNCTION = memoize((TEST_OBJECT) => TEST_OBJECT);
 
 describe('memoize.js', () => {
     test('Test memoize with Function', () => {
@@ -10,10 +9,10 @@ describe('memoize.js', () => {
     }) 
 
     test('Test memoize with test result', () => {
-        expect(func(res)).toBe('result');
+        expect(TEST_FUNCTION(TEST_OBJECT)).toBe('result');
     })
     
     test('Test memoize cache', () => {
-        expect(func.Cache).toBe(undefined);
+        expect(TEST_FUNCTION(TEST_OBJECT).Cache).toBe(undefined);
     }) 
 }) 
