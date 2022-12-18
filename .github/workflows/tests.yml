@@ -19,7 +19,7 @@ jobs:
     - name: Run test and generate test coverage
       run: |
         npm install
-        ./node_modules/.bin/jest --coverage
+        npm test
 
     - name: Coveralls
       uses: coverallsapp/github-action@master
